@@ -1,0 +1,21 @@
+.asidetoggler {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+  }
+  
+  .asidetoggler button {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #900000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .asidetoggler button:hover {
+    background-color: #555;
+  }
