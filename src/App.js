@@ -1,43 +1,43 @@
 
-import { Model } from '../src/Component/Firstviewgltf.jsx';
+import { Model2 } from '../src/Component/Firstviewgltf.jsx';
 import { Canvas } from '@react-three/fiber';
 
 
 import './App.css';
 import { CameraProvider } from './Cameramove.jsx';
-import { Html, OrbitControls, useProgress } from '@react-three/drei';
-import { Suspense } from 'react';
+import { Html, OrbitControls, useProgress,Loader, Environment, SpotLight } from '@react-three/drei';
+import { Suspense, useState } from 'react';
+import { Model } from './Component/New.jsx';
 
 function App() {
   
 
-  function Loader() {
-    const { progress } = useProgress()
-    return <Html center>{progress} % loaded</Html>
-  }
+
+
   return (
+<>
 
     
-    <CameraProvider>
+    {/* <CameraProvider> */}
 
   
   
        <Canvas shadows className='CANVAS'>
-       <OrbitControls enableZoom={false} rotateSpeed={0.002} panSpeed={0.04}></OrbitControls>
-       <Suspense fallback={<Loader/>}></Suspense>
+   
+       <OrbitControls ></OrbitControls>
+   <spotLight intensity={5.7} color={"beige"} position={[0,1.0,.41]}/>
           <Model/>
-          <Suspense/>
-        
+        {/* <ambientLight intensity={.51}/> */}
+        <Environment preset='forest' />
       </Canvas> 
-
-       
-      </CameraProvider>
- 
-
+     
+   
+      {/* </CameraProvider> */}
+  
 
        
         
-
+      </>
 
    
   )
