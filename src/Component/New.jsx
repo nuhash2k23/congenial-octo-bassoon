@@ -22,7 +22,7 @@ const guest = () =>{
     gsap.to(camera.current, { fov: 10, duration: 1, ease: 'ease', onUpdate: () => camera.current.updateProjectionMatrix() });
     gsap.to(group.current.rotation, { y: -Math.PI / 2, duration: 1, ease: 'ease' });
   }
-  play()
+
 
 }
 
@@ -105,7 +105,7 @@ const buttonStyle = {
      {}
 
 <div style={swapclass}>
-<button style={buttonStyle}  onClick={guest}>EXPLORE</button>
+<button style={buttonStyle}  onClick={guest} onDoubleClick={play}>EXPLORE</button>
 <button style={buttonStyle} onClick={cto}>BACK</button>
 
 

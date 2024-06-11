@@ -24,7 +24,7 @@ function App() {
   
        <Canvas shadows className='CANVAS'>
    
-       <OrbitControls ></OrbitControls>
+       {/* <OrbitControls ></OrbitControls> */}
    <spotLight intensity={5.7} color={"beige"} position={[0,1.0,.41]}/>
           <Model/>
         {/* <ambientLight intensity={.51}/> */}
